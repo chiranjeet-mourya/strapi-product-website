@@ -1,0 +1,88 @@
+@import "../../css-config/mixins.scss";
+
+.footer_section{
+    width: 100%;
+
+    .footer_content{
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: wrap;
+        gap: 20px;
+        @include md{
+            justify-content: space-between;padding: 50px 0;
+        }
+
+        .col{
+            max-width: 300px;
+
+            .title{
+                margin-bottom: 15px;
+                font-size: 20px;
+                transition: all 0.3s;
+                cursor: pointer;
+                &:hover{
+                    color: #8e2de2;
+                }
+            }
+            .txt{
+                color: rgba(0,0,0,0.5);
+                font-size: 16px;
+            }
+            .c_item{
+                display: flex;
+                margin-bottom: 10px;
+
+                svg{
+                    flex-shrink: 0;
+                    font-size: 16px;
+                    margin-right: 10px;
+                    margin-top: 4px;
+                    color: rgba(0,0,0,0.5);
+                }
+            }
+            span{
+                &.txt{
+                    display: block;
+                    margin-bottom: 6px;
+                    cursor: pointer;
+                    transition: all 0.4s;
+
+                    &:hover{
+                        text-decoration: underline;
+                        color: #8e2de2;
+                        transform: translateX(7px);
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom_bar{
+        border-top: 1px solid rgba(0,0,0,0.3);
+
+        .bottom_content{
+            padding: 20px 5px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            @include md{
+                padding: 0;
+                // padding-left: 60px;
+                max-width: 1200px;
+                margin: 0 auto;
+                height: 60px;
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: center;
+            }
+            .txt{
+                font-size: 15px;
+                color: rgba(0,0,0,0.5);
+            }
+        }
+    }
+}
